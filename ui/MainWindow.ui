@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>846</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">/*  sections styles */
+#section1, #section2, #section3, #section4, #section5, #section6 {
+	background-color: #DDDDDD;
+	border-radius: 5px;
+}
+
+/*  Splitter styles */
+QSplitter::handle {
+    background-color: none;
+}
+
+/*  Text styles */
+QLabel {
+	min-height: 30px;
+	max-height: 30px;
+	border-radius: 5px;
+}
+
+#FrameImage, #FrameImage2 {
+	width: 340px;
+	height: 190px;
+	border-radius: 5px;
+	max-width: 640px;
+	max-height: 480px;
+}
+
+/*  Plain Text styles */
+QPlainTextEdit {
+	background-color: #fff;
+	color: #000;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+/*  buttons styles */
+QPushButton {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	border-radius: 5px;
+	min-width: 150px;
+	min-height: 30px;
+	max-height: 30px;
+}
+
+QPushButton:hover {
+	background-color: #333333;
+}
+
+#PriviewFrameButton, #PriviewFrameButton2 {
+	max-width: 340px;
+}
+
+/*  input  styles */
+QLineEdit {
+	background-color: rgb(255, 255, 255);
+	padding-left: 10px;
+	border: 0px;
+	border-radius: 5px;
+	min-width: 330px;
+	min-height: 30px;
+	max-height: 30px;
+}
+
+
+/*  combbobox styles */
+QComboBox {
+    background-color: #000;
+	color: white;
+	border-radius: 5px;
+	padding-left: 10px;
+	min-height: 30px;
+	min-width: 155px;
+	max-width: 160px;
+	max-height: 30px;
+}
+
+#TranscriptType {
+	max-width: 150px;
+}
+
+#TransparentInput {
+	min-width: 330px;
+	max-width: 330px;
+}
+
+#TransparentInput2, #AlbumNameInput2, #AlbumNameInput3, #TranslationToInput2, #ArtistGender {
+	max-width: 16777215px;
+}
+
+#AlbumNameInput2, #AlbumNameInput3 {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	min-width: 100px;
+}
+
+#FontSizeWord1, #FontSizeWord2 {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+QComboBox:hover {
+    background-color: #333333 ;
+}
+
+QComboBox::down-arrow {
+    image: url(ui/icons/arrow-down.png);
+	width: 10px;
+	height: 10px;
+}
+
+QComboBox::drop-down {
+	background-color: #000;
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 30px;
+}
+
+QComboBox::drop-down:hover {
+	background-color: #333333  ;
+}
+
+QComboBox QAbstractItemView {
+    background-color: white;
+    color: black;
+    border: 1px solid #000;
+    selection-background-color: #333333;
+}
+
+QComboBox:disabled {
+    background-color: #6D55FF;
+    color: #fff;
+}
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_7">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-752</y>
+         <width>829</width>
+         <height>2306</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QWidget" name="section1" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>132</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>132</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="Title1">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <property name="text">
+                <string>Collect Video Information ( Transcript, Audio, Youtube Cover, Data )</string>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
+               </property>
+               <property name="openExternalLinks">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="CollectVideoURL">
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="placeholderText">
+                <string>Video URL</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QComboBox" name="TranscriptType">
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <property name="placeholderText">
+                  <string/>
+                 </property>
+                 <property name="duplicatesEnabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="frame">
+                  <bool>true</bool>
+                 </property>
+                 <property name="modelColumn">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Select Transcript</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>en</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>en-us</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="CollectVideoButton">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="text">
+                  <string>Collect Now</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QWidget" name="section2" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>218</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>218</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="Title2">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <property name="text">
+                <string>Select Needed Information</string>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
+               </property>
+               <property name="openExternalLinks">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="SelectBackgroundButton">
+                 <property name="styleSheet">
+                  <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Select Background</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="BackgroundPATH">
+                 <property name="styleSheet">
+                  <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Background PATH</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="SelectBackgroundButton_2">
+                 <property name="styleSheet">
+                  <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Select Logo</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="LogoPATH">
+                 <property name="styleSheet">
+                  <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Logo PATH</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="SelectBackgroundButton_3">
+                 <property name="styleSheet">
+                  <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Select Audio</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="AudioPATH">
+                 <property name="styleSheet">
+                  <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Audio PATH</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="SelectBackgroundButton_4">
+                 <property name="styleSheet">
+                  <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Select Lyrics</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="LyricsPATH">
+                 <property name="styleSheet">
+                  <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Lyrics PATH</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QWidget" name="section3" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>494</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>494</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="handleWidth">
+              <number>10</number>
+             </property>
+             <widget class="QLabel" name="Title3">
+              <property name="text">
+               <string>Auto Editor Settings</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QSplitter" name="splitter_5">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="opaqueResize">
+               <bool>true</bool>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <property name="childrenCollapsible">
+               <bool>true</bool>
+              </property>
+              <widget class="QSplitter" name="splitter_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QLineEdit" name="SongNameInput">
+                <property name="minimumSize">
+                 <size>
+                  <width>340</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>340</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+                <property name="placeholderText">
+                 <string>Song Title ( Sia - Unstappable)</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="AlbumNameInput">
+                <property name="minimumSize">
+                 <size>
+                  <width>340</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>340</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>Album Name ( Album : AlbumName)</string>
+                </property>
+               </widget>
+               <widget class="QSplitter" name="splitter_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>5</number>
+                </property>
+                <widget class="QComboBox" name="AudioLengthInput">
+                 <property name="minimumSize">
+                  <size>
+                   <width>165</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Audio Length</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>10 second</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>30 second</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>60 second</string>
+                  </property>
+                 </item>
+                </widget>
+                <widget class="QComboBox" name="VideoQualityInput">
+                 <property name="minimumSize">
+                  <size>
+                   <width>165</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Video Quality</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>1080p</string>
+                  </property>
+                 </item>
+                </widget>
+               </widget>
+               <widget class="QSplitter" name="splitter">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>5</number>
+                </property>
+                <widget class="QComboBox" name="TranslationToInput">
+                 <property name="minimumSize">
+                  <size>
+                   <width>165</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Translation</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Translate to Arabic</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Translate to English</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Translate to Spanish</string>
+                  </property>
+                 </item>
+                </widget>
+                <widget class="QComboBox" name="TextFontInput">
+                 <property name="minimumSize">
+                  <size>
+                   <width>165</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Text Font</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Font 1</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Font 2</string>
+                  </property>
+                 </item>
+                </widget>
+               </widget>
+               <widget class="QComboBox" name="TransparentInput">
+                <property name="minimumSize">
+                 <size>
+                  <width>340</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>340</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Transparent</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>5%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>10%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>15%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>20%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>25%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>30%</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QLabel" name="FrameImage">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>190</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>340</width>
+                  <height>190</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>../../../../../../../Downloads/cover_test.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="PriviewFrameButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>340</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Preview Frame</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QPlainTextEdit" name="UpdatesBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>updates...</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="MakeVideoButton">
+                <property name="text">
+                 <string>Make Video</string>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QWidget" name="section4" native="true">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter_12">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="handleWidth">
+              <number>10</number>
+             </property>
+             <widget class="QLabel" name="Title4">
+              <property name="text">
+               <string>Youtube Cover Creator</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QSplitter" name="splitter_11">
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="opaqueResize">
+               <bool>true</bool>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <property name="childrenCollapsible">
+               <bool>true</bool>
+              </property>
+              <widget class="QSplitter" name="splitter_9">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QComboBox" name="TransparentInput2">
+                <property name="minimumSize">
+                 <size>
+                  <width>165</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Transparent</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>5%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>10%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>15%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>20%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>25%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>30%</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QSplitter" name="splitter_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>0</number>
+                </property>
+                <widget class="QLineEdit" name="AlbumNameInput2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>110</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Song Name</string>
+                 </property>
+                </widget>
+                <widget class="QComboBox" name="FontSizeWord1">
+                 <item>
+                  <property name="text">
+                   <string>Font Size</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>100 px</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>110 px</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>120 px</string>
+                  </property>
+                 </item>
+                </widget>
+               </widget>
+               <widget class="QSplitter" name="splitter_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>0</number>
+                </property>
+                <widget class="QLineEdit" name="AlbumNameInput3">
+                 <property name="minimumSize">
+                  <size>
+                   <width>110</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>مترجمه بالعربية</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string/>
+                 </property>
+                </widget>
+                <widget class="QComboBox" name="FontSizeWord2">
+                 <item>
+                  <property name="text">
+                   <string>Font Size</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>100 px</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>110 px</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>120 px</string>
+                  </property>
+                 </item>
+                </widget>
+               </widget>
+               <widget class="QPlainTextEdit" name="plainTextEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>110</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>110</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>updates...</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_10">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QLabel" name="FrameImage2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>190</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>340</width>
+                  <height>190</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>../../../../../../../Downloads/cover (2).jpg</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="PriviewFrameButton2">
+                <property name="maximumSize">
+                 <size>
+                  <width>340</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Preview Frame</string>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QWidget" name="section5" native="true">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="0">
+            <widget class="QSplitter" name="splitter_17">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="handleWidth">
+              <number>10</number>
+             </property>
+             <widget class="QLabel" name="Title5">
+              <property name="text">
+               <string>Lyrics Table ( View, Edit )</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QTableWidget" name="LyricsTable">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>300</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="dragEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="dragDropMode">
+               <enum>QAbstractItemView::DragDrop</enum>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="textElideMode">
+               <enum>Qt::ElideRight</enum>
+              </property>
+              <property name="verticalScrollMode">
+               <enum>QAbstractItemView::ScrollPerPixel</enum>
+              </property>
+              <property name="horizontalScrollMode">
+               <enum>QAbstractItemView::ScrollPerPixel</enum>
+              </property>
+              <property name="showGrid">
+               <bool>true</bool>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::DashLine</enum>
+              </property>
+              <property name="sortingEnabled">
+               <bool>false</bool>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="cornerButtonEnabled">
+               <bool>true</bool>
+              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>39</number>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>100</number>
+              </attribute>
+              <attribute name="horizontalHeaderHighlightSections">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderStretchLastSection">
+               <bool>false</bool>
+              </attribute>
+              <row>
+               <property name="text">
+                <string>test</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>test2</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>test3</string>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>Show Time</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>First Lang</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Second Lang</string>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="text">
+                <string>Hello1</string>
+               </property>
+              </item>
+              <item row="1" column="1">
+               <property name="text">
+                <string>Hello2</string>
+               </property>
+              </item>
+              <item row="2" column="2">
+               <property name="text">
+                <string>Hello3</string>
+               </property>
+              </item>
+             </widget>
+             <widget class="QSplitter" name="splitter_16">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_14">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QSplitter" name="splitter_13">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>5</number>
+                </property>
+                <widget class="QPushButton" name="pushButton">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Add Row</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="pushButton_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Delete Row</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QPushButton" name="pushButton_3">
+                <property name="text">
+                 <string>Load Lyrics To Table ( *.lrc *.json )</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_15">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QPushButton" name="pushButton_5">
+                <property name="text">
+                 <string>Translate To Arabic ( Google Translation )</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="pushButton_4">
+                <property name="text">
+                 <string>Translate To Arabic ( ChatGPT Translation )</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QPushButton" name="pushButton_6">
+               <property name="text">
+                <string>Save Lyrics</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QWidget" name="section6" native="true">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter_22">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="handleWidth">
+              <number>10</number>
+             </property>
+             <widget class="QLabel" name="Title6">
+              <property name="text">
+               <string>Generate Video Details ( Title, Description, Keywords )</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QSplitter" name="splitter_18">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="handleWidth">
+               <number>0</number>
+              </property>
+              <widget class="QPushButton" name="pushButton_7">
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+               </property>
+               <property name="text">
+                <string>Select Lyrics</string>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="LyricsPATH2">
+               <property name="styleSheet">
+                <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+               </property>
+               <property name="placeholderText">
+                <string>Lyrics PATH</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QSplitter" name="splitter_21">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_19">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QComboBox" name="TranslationToInput2">
+                <property name="minimumSize">
+                 <size>
+                  <width>165</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Translation</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Translate to Arabic</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Translate to English</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Translate to Spanish</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QComboBox" name="ArtistGender">
+                <item>
+                 <property name="text">
+                  <string>Artist Gender</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>male</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>female</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>group</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit">
+                <property name="placeholderText">
+                 <string>Artist Name ( Taylor Swift )</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_2">
+                <property name="placeholderText">
+                 <string>Song Name ( Unstappable )</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_3">
+                <property name="placeholderText">
+                 <string>Artist Youtube Channel URL</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_4">
+                <property name="placeholderText">
+                 <string>Artist Spotify Profile URL</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_6">
+                <property name="placeholderText">
+                 <string>Your Youtube Channel Name</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_8">
+                <property name="placeholderText">
+                 <string>Your Youtube Channel URL</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_7">
+                <property name="placeholderText">
+                 <string>Your Twitter Profile URL</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_5">
+                <property name="placeholderText">
+                 <string>Your Facebook Page URL</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_9">
+                <property name="placeholderText">
+                 <string>Your Instagram Profile URL</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_20">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QLineEdit" name="lineEdit_10">
+                <property name="placeholderText">
+                 <string>Generated Video Title</string>
+                </property>
+               </widget>
+               <widget class="QPlainTextEdit" name="plainTextEdit_2">
+                <property name="placeholderText">
+                 <string>Generated Video Description</string>
+                </property>
+               </widget>
+               <widget class="QPlainTextEdit" name="plainTextEdit_3">
+                <property name="placeholderText">
+                 <string>Generated Video Keywords</string>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+             <widget class="QPushButton" name="pushButton_8">
+              <property name="text">
+               <string>Generate Details</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

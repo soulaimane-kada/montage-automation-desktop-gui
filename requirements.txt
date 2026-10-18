@@ -1,0 +1,9 @@
+PyQt5
+beautifulsoup4
+requests
+googletrans==4.0.0rc1
+Pillow
+moviepy
+youtube-transcript-api
+pytube
+openai

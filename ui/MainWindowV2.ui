@@ -1,0 +1,2225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1097</width>
+    <height>746</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Automated Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../AI_Generated_Image.ico</normaloff>../AI_Generated_Image.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#section1, #section2, #section3, #section4 {
+	background-color: #E5E4E2;
+}
+
+/*  input  styles */
+QLineEdit {
+	background-color: rgb(255, 255, 255);
+	padding-left: 10px;
+	border: 0px;
+	border-radius: 5px;
+	min-height: 30px;
+	max-height: 30px;
+}
+
+/*  Plain Text styles */
+QPlainTextEdit {
+	background-color: #fff;
+	color: #000;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+/*  buttons styles */
+QPushButton {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	border-radius: 5px;
+	min-height: 30px;
+	max-height: 30px;
+}
+
+QPushButton:hover, QPushButton:disabled {
+	background-color: #333333;
+}
+
+/*  combbobox styles */
+QComboBox {
+    background-color: #000;
+	color: white;
+	border-radius: 5px;
+	padding-left: 10px;
+	min-height: 30px;
+	max-height: 30px;
+}
+
+QComboBox:hover {
+    background-color: #333333 ;
+}
+
+QComboBox::down-arrow {
+    image: url(assets/icons/arrow-down.png);
+	width: 10px;
+	height: 10px;
+}
+
+QComboBox::drop-down {
+	background-color: #000;
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 30px;
+}
+
+QComboBox::drop-down:hover {
+	background-color: #333333  ;
+}
+
+QComboBox QAbstractItemView {
+    background-color: white;
+    color: black;
+    border: 1px solid #000;
+    selection-background-color: #333333;
+}
+
+QComboBox:disabled {
+    background-color: #333333;
+    color: #fff;
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="TabSection1">
+       <attribute name="title">
+        <string>Make Video</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QWidget" name="section1" native="true">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="leftMargin">
+            <number>20</number>
+           </property>
+           <property name="topMargin">
+            <number>20</number>
+           </property>
+           <property name="rightMargin">
+            <number>20</number>
+           </property>
+           <property name="bottomMargin">
+            <number>20</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter_14">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="handleWidth">
+              <number>20</number>
+             </property>
+             <widget class="QSplitter" name="splitter_12">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QLineEdit" name="YoutubeVideoURL">
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="placeholderText">
+                <string>Video URL</string>
+               </property>
+              </widget>
+              <widget class="QSplitter" name="splitter">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <widget class="QComboBox" name="TranscriptType">
+                <property name="minimumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Select Transcript</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>en</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>en-US</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>en-GB</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>es</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ko</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ja</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>zh</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ar</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>fr</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>de</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QPushButton" name="CollectYoutubeVideoButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Collect Now</string>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+             <widget class="QSplitter" name="splitter_11">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>0</number>
+               </property>
+               <widget class="QPushButton" name="VideoBackgroundButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                </property>
+                <property name="text">
+                 <string>Select Background</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="VideoBackgroundPath">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Background PATH</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>0</number>
+               </property>
+               <widget class="QPushButton" name="VideoLogoButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                </property>
+                <property name="text">
+                 <string>Select Logo</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="VideoLogoPath">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Logo PATH</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>0</number>
+               </property>
+               <widget class="QPushButton" name="VideoSongButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                </property>
+                <property name="text">
+                 <string>Select Audio</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="VideoSongPath">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Audio PATH</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>0</number>
+               </property>
+               <widget class="QPushButton" name="VideoLyricsButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                </property>
+                <property name="text">
+                 <string>Select Lyrics</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="VideoLyricsPath">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Lyrics PATH</string>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+             <widget class="QSplitter" name="splitter_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_10">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>20</number>
+               </property>
+               <widget class="QSplitter" name="splitter_9">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>190</height>
+                 </size>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>10</number>
+                </property>
+                <widget class="QLineEdit" name="VideoSongTitle">
+                 <property name="minimumSize">
+                  <size>
+                   <width>340</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Song Title ( Sia - Unstappable)</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="VideoSongAlbum">
+                 <property name="minimumSize">
+                  <size>
+                   <width>340</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Album : </string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Album Name ( Album : AlbumName)</string>
+                 </property>
+                </widget>
+                <widget class="QSplitter" name="splitter_7">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <widget class="QComboBox" name="VideoLength">
+                  <item>
+                   <property name="text">
+                    <string>audio length</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>10</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>30</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>60</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>120</string>
+                   </property>
+                  </item>
+                 </widget>
+                 <widget class="QComboBox" name="VideoQualty">
+                  <item>
+                   <property name="text">
+                    <string>1080p</string>
+                   </property>
+                  </item>
+                 </widget>
+                </widget>
+                <widget class="QSplitter" name="splitter_8">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <widget class="QComboBox" name="VideoLyricsType">
+                  <item>
+                   <property name="text">
+                    <string>without translation</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>translate to arabic</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>translate to english</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>translate to spanish</string>
+                   </property>
+                  </item>
+                 </widget>
+                 <widget class="QComboBox" name="VideoFontType">
+                  <property name="currentIndex">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Cairo Font - Black ( Arabic/English )</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Cairo Font ( Arabic/English )</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Cairo Font - Extra Bold ( Arabic/English )</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Tajawal Font - Bold ( Arabic/English )</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Tajawal Font - Exrta Bold ( Arabic/English )</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Caveat Font ( English )</string>
+                   </property>
+                  </item>
+                 </widget>
+                </widget>
+                <widget class="QComboBox" name="Transparant">
+                 <property name="minimumSize">
+                  <size>
+                   <width>340</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="currentIndex">
+                  <number>7</number>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>5%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>10%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>15%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>20%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>25%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>30%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>35%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>40%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>45%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>50%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>55%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>60%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>65%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>70%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>75%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>80%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>85%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>90%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>95%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>100%</string>
+                  </property>
+                 </item>
+                </widget>
+               </widget>
+               <widget class="QSplitter" name="splitter_6">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>10</number>
+                </property>
+                <widget class="QPushButton" name="VideoFramePreview">
+                 <property name="minimumSize">
+                  <size>
+                   <width>340</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Preview Frame</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="GenerateVideoButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>340</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Make Video</string>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QLabel" name="CoverViewer">
+               <property name="minimumSize">
+                <size>
+                 <width>500</width>
+                 <height>280</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>500</width>
+                 <height>280</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../../../../../../../Downloads/cover_test.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="VideoBox">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="lineWidth">
+                <number>1</number>
+               </property>
+               <property name="midLineWidth">
+                <number>0</number>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="documentTitle">
+                <string/>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="cursorWidth">
+                <number>1</number>
+               </property>
+               <property name="maximumBlockCount">
+                <number>0</number>
+               </property>
+               <property name="backgroundVisible">
+                <bool>false</bool>
+               </property>
+               <property name="centerOnScroll">
+                <bool>false</bool>
+               </property>
+               <property name="placeholderText">
+                <string>updates...</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QPlainTextEdit" name="EditorUpdates">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>updates...</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TabSection2">
+       <attribute name="title">
+        <string>Generate Video Details</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QWidget" name="section2" native="true">
+          <layout class="QGridLayout" name="gridLayout_4">
+           <property name="leftMargin">
+            <number>20</number>
+           </property>
+           <property name="topMargin">
+            <number>20</number>
+           </property>
+           <property name="rightMargin">
+            <number>20</number>
+           </property>
+           <property name="bottomMargin">
+            <number>20</number>
+           </property>
+           <property name="horizontalSpacing">
+            <number>0</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>20</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter_28">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="handleWidth">
+              <number>20</number>
+             </property>
+             <widget class="QSplitter" name="splitter_27">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_17">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>0</number>
+               </property>
+               <widget class="QPushButton" name="VideoBackground2Button">
+                <property name="minimumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                </property>
+                <property name="text">
+                 <string>Select Background</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="VideoBackgroundPath2">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Background PATH</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_18">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>0</number>
+               </property>
+               <widget class="QPushButton" name="DescriptionLyricsButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                </property>
+                <property name="text">
+                 <string>Select Lyrics</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="DescriptionLyricsPath">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Lyrics PATH</string>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+             <widget class="QSplitter" name="splitter_26">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_24">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>20</number>
+               </property>
+               <widget class="QSplitter" name="splitter_19">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>10</number>
+                </property>
+                <widget class="QComboBox" name="Transparant2">
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>5%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>10%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>15%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>20%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>25%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>30%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>35%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>40%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>45%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>50%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>55%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>60%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>65%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>70%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>75%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>80%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>85%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>90%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>95%</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>100%</string>
+                  </property>
+                 </item>
+                </widget>
+                <widget class="QSplitter" name="splitter_16">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="handleWidth">
+                  <number>0</number>
+                 </property>
+                 <widget class="QLineEdit" name="song_name_only">
+                  <property name="styleSheet">
+                   <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Song Name</string>
+                  </property>
+                 </widget>
+                 <widget class="QComboBox" name="song_name_font_size">
+                  <property name="styleSheet">
+                   <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                  </property>
+                  <property name="currentIndex">
+                   <number>9</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>100</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>120</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>140</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>160</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>180</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>200</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>220</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>240</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>260</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>280</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>300</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>320</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>340</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>360</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>380</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>400</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>420</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>440</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>460</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>480</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>500</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>520</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>540</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>560</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>580</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>600</string>
+                   </property>
+                  </item>
+                 </widget>
+                </widget>
+                <widget class="QSplitter" name="splitter_15">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="handleWidth">
+                  <number>0</number>
+                 </property>
+                 <widget class="QLineEdit" name="cover_botton_word">
+                  <property name="styleSheet">
+                   <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                  </property>
+                  <property name="text">
+                   <string>مترجمه بالعربية</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Bottom Word</string>
+                  </property>
+                 </widget>
+                 <widget class="QComboBox" name="second_word_font_size">
+                  <property name="styleSheet">
+                   <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                  </property>
+                  <property name="currentIndex">
+                   <number>4</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>100</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>120</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>140</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>160</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>180</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>200</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>220</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>240</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>260</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>280</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>300</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>320</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>340</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>360</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>380</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>400</string>
+                   </property>
+                  </item>
+                 </widget>
+                </widget>
+                <widget class="QPlainTextEdit" name="CoverBox">
+                 <property name="placeholderText">
+                  <string>updates...</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QSplitter" name="splitter_22">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>10</number>
+                </property>
+                <widget class="QComboBox" name="DescriptionLyricsType">
+                 <item>
+                  <property name="text">
+                   <string>without translation</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>translate to arabic</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>translate to english</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>translate to spanish</string>
+                  </property>
+                 </item>
+                </widget>
+                <widget class="QComboBox" name="ArtistGender">
+                 <item>
+                  <property name="text">
+                   <string>artist is male</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>artist is female</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>artist is a group</string>
+                  </property>
+                 </item>
+                </widget>
+                <widget class="QLineEdit" name="ArtistName">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Artist Name ( Taylor Swift )</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="SongName_Keyword">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Song Name ( Unstappable )</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ArtistYoutubeChannelLink">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Artist Youtube Channel URL</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ArtistSpofityLink">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Artist Spotify Profile URL</string>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_25">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>490</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>380</width>
+                 <height>490</height>
+                </size>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>20</number>
+               </property>
+               <widget class="QSplitter" name="splitter_20">
+                <property name="maximumSize">
+                 <size>
+                  <width>380</width>
+                  <height>240</height>
+                 </size>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>10</number>
+                </property>
+                <widget class="QLabel" name="CoverViewer2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>380</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>380</width>
+                   <height>200</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap>../../../../../../../Downloads/cover (2).jpg</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="MakeYoutubeCover">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Make Youtube Cover</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QSplitter" name="splitter_21">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="handleWidth">
+                 <number>10</number>
+                </property>
+                <widget class="QLineEdit" name="YourYoutubeChannelName">
+                 <property name="minimumSize">
+                  <size>
+                   <width>380</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>380</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>@MusicLightAR</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Your Youtube Channel Name</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="YourYoutubeChannelLink">
+                 <property name="text">
+                  <string>https://www.youtube.com/@MusicLightAR</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="readOnly">
+                  <bool>false</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Your Youtube Channel URL</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="YourTwitterLink">
+                 <property name="text">
+                  <string>https://www.twitter.com/MusicLightAR</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Your Twitter Profile URL</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="YourFacebookLink">
+                 <property name="text">
+                  <string>https://www.facebook.com/MusicLightAR</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Your Facebook Page URL</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="YourInstagramLink">
+                 <property name="text">
+                  <string>https://www.instagram.com/MusicLightAR</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Your Instagram Profile URL</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="GenerateVideoDescriptionButton">
+                 <property name="text">
+                  <string>Generate Details</string>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_23">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QLineEdit" name="Titlebox">
+                <property name="placeholderText">
+                 <string>Generated Title</string>
+                </property>
+               </widget>
+               <widget class="QPlainTextEdit" name="DescriptionBox">
+                <property name="placeholderText">
+                 <string>Generated Description</string>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPlainTextEdit" name="Tagsbox">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>Generated Keywords</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TabSection3">
+       <attribute name="title">
+        <string>Lyrics Table</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QWidget" name="section3" native="true">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <property name="leftMargin">
+            <number>20</number>
+           </property>
+           <property name="topMargin">
+            <number>20</number>
+           </property>
+           <property name="rightMargin">
+            <number>20</number>
+           </property>
+           <property name="bottomMargin">
+            <number>20</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter_33">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="handleWidth">
+              <number>20</number>
+             </property>
+             <widget class="QTableWidget" name="lyrics_table">
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>150</number>
+              </attribute>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>Show Time</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>First Lang</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Second Lang</string>
+               </property>
+              </column>
+             </widget>
+             <widget class="QSplitter" name="splitter_32">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_31">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <widget class="QSplitter" name="splitter_30">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <widget class="QPushButton" name="table_add_lyrics">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Add Row</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="table_remove_lyrics">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Delete Row</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QPushButton" name="load_data">
+                <property name="text">
+                 <string>Load Lyrics To Table ( *.lrc *.json )</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_29">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <widget class="QPushButton" name="translate_tableGO">
+                <property name="text">
+                 <string>Translate To Arabic ( Google Translation )</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="translate_tableAI">
+                <property name="text">
+                 <string>Translate To Arabic ( ChatGPT Translation )</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QPushButton" name="make_json_format">
+               <property name="text">
+                <string>Save Lyrics</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TabSection4">
+       <attribute name="title">
+        <string>Get Genius Albums</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QWidget" name="section4" native="true">
+          <layout class="QGridLayout" name="gridLayout_9">
+           <property name="leftMargin">
+            <number>20</number>
+           </property>
+           <property name="topMargin">
+            <number>20</number>
+           </property>
+           <property name="rightMargin">
+            <number>20</number>
+           </property>
+           <property name="bottomMargin">
+            <number>20</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter_40">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="handleWidth">
+              <number>20</number>
+             </property>
+             <widget class="QSplitter" name="splitter_35">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_34">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>0</number>
+               </property>
+               <widget class="QPushButton" name="CollectButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>150</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>150</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;</string>
+                </property>
+                <property name="text">
+                 <string>Get Albums</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="GeniusPath">
+                <property name="styleSheet">
+                 <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Genius Album PATH</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QPlainTextEdit" name="CollectedBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>updates...</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QSplitter" name="splitter_39">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="handleWidth">
+               <number>10</number>
+              </property>
+              <widget class="QSplitter" name="splitter_36">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <widget class="QLabel" name="AlbumLogo">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>../../gui/assets/white.jpg</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+               <widget class="QPlainTextEdit" name="AlbumTitle">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#AlbumTitle {
+	border-radius: none;
+}</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Genius Album Name</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QSplitter" name="splitter_38">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="handleWidth">
+                <number>10</number>
+               </property>
+               <widget class="QTreeWidget" name="AlbumsTree">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>1</number>
+                </property>
+                <property name="autoExpandDelay">
+                 <number>-1</number>
+                </property>
+                <property name="columnCount">
+                 <number>1</number>
+                </property>
+                <attribute name="headerCascadingSectionResizes">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="headerHighlightSections">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="headerShowSortIndicator" stdset="0">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="headerStretchLastSection">
+                 <bool>true</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>Albums</string>
+                 </property>
+                </column>
+               </widget>
+               <widget class="QSplitter" name="splitter_37">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <widget class="QComboBox" name="Lyrics_Combobox">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                </widget>
+                <widget class="QTableWidget" name="LyricsTableSCraped">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="lineWidth">
+                  <number>0</number>
+                 </property>
+                 <property name="showGrid">
+                  <bool>true</bool>
+                 </property>
+                 <property name="gridStyle">
+                  <enum>Qt::SolidLine</enum>
+                 </property>
+                 <property name="sortingEnabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="cornerButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="rowCount">
+                  <number>0</number>
+                 </property>
+                 <property name="columnCount">
+                  <number>1</number>
+                 </property>
+                 <attribute name="horizontalHeaderCascadingSectionResizes">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderCascadingSectionResizes">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderHighlightSections">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderStretchLastSection">
+                  <bool>true</bool>
+                 </attribute>
+                 <column>
+                  <property name="text">
+                   <string>Lyrics</string>
+                  </property>
+                 </column>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QTableWidget" name="FinalCollectInformation">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <attribute name="horizontalHeaderDefaultSectionSize">
+                <number>200</number>
+               </attribute>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderStretchLastSection">
+                <bool>false</bool>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Song Title</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Song Logo</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Youtube Cover</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Song URL</string>
+                </property>
+               </column>
+              </widget>
+              <widget class="QPushButton" name="SaveMetadata">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Save Albums</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TabSettings">
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>701</width>
+          <height>411</height>
+         </rect>
+        </property>
+        <widget class="QComboBox" name="ChangeFont">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>251</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>Lato Regular</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lato Bold</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lato Black</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
