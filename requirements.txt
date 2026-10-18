@@ -3,7 +3,7 @@ beautifulsoup4
 requests
 googletrans==4.0.0rc1
 Pillow
-moviepy
+moviepy==1.0.3
 youtube-transcript-api
 pytube
 openai

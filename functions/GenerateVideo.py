@@ -1,9 +1,10 @@
 import json, sys
 from PIL import Image
 import moviepy.config as cfg
+from googletrans import Translator
+
 from moviepy.editor import ImageClip, TextClip, CompositeVideoClip, AudioFileClip, VideoFileClip
 from moviepy.video.compositing.concatenate import concatenate_videoclips
-from googletrans import Translator
 
 
 # translate text
